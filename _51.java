@@ -10,11 +10,11 @@ public class _51 {
             return res;
         }
     public static void main(String[ ] args) {
-        Playground n1=new Playground();
+        _51 n1=new _51();
         n1.base=2;
         n1.exp=3;
         
-        Playground n2=new Playground();
+        _51 n2=new _51();
         n2.base=3;
         n2.exp=4;
         
