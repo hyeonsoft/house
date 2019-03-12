@@ -1,5 +1,6 @@
+#include <stdio.h>
 #include <windows.h>
-linenum;i;
+int i,linenum;
 void line(const int which){
 	int a,u;
 	if(which==1){
@@ -14,16 +15,19 @@ void line(const int which){
 		printf("+---------------+");
 	}
 	printf("\n");
+	return;
 }
 void printmulti(const int x, const int y){
 	printf("l%2dx%3d = %4d  ",x,y,x*y);
+	return;
 }
-main(u){
-	int now=1;
+int main(){
+	int u,now=1;
 	printf("number : ");
 	scanf("%d",&linenum);
 	line((linenum/4)+1);
 	for(u=((linenum/4)+1);u>0;u--){
+		if(u==1&&!(linenum%4))return 0;
 		int x=now;
 		int end=(now+3>linenum?linenum:now+3);
 		int row=1;
@@ -40,5 +44,5 @@ main(u){
 		now+=4;
 		line(u);
 	}
-	system("pause");
+	return 0;
 }
